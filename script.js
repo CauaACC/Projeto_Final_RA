@@ -22,7 +22,7 @@ function setupCard(markerId, modelId, statsId, data) {
     console.log(markerId, "detectado!");
 
     modelEntity.setAttribute("gltf-model", data.model);
-    modelEntity.setAttribute("scale", "0.5 0.5 0.5");
+    modelEntity.setAttribute("scale", "0.9 0.9 0.9");
     modelEntity.setAttribute("rotation", "0 0 0");
 
     modelEntity.setAttribute("animation", {
@@ -46,6 +46,6 @@ function setupCard(markerId, modelId, statsId, data) {
   });
 }
 
-setupCard("charA", "model1", "stats1", cards.charA_marker);
-setupCard("cybertruck", "model2", "stats2", cards.cybertruck_marker);
-setupCard("sus", "model3", "stats3", cards.sus_marker);
+setupCard("charA", "model1", "stats1", cards.card1);
+setupCard("cybertruck", "model2", "stats2", cards.card2);
+setupCard("sus", "model3", "stats3", cards.card3);
