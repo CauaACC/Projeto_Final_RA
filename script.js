@@ -4,7 +4,7 @@ const cards = {
     stats: "ATK: 70 | DEF: 50 | SPD: 45",
   },
   card2: {
-    model: "models/cybertruck.glb",
+    model: "models/littleM.glb",
     stats: "ATK: 60 | DEF: 70 | SPD: 90",
   },
   card3: {
@@ -39,5 +39,5 @@ function setupCard(markerId, modelId, statsId, data) {
 }
 
 setupCard("charA", "model1", "stats1", cards.card1);
-setupCard("cybertruck", "model2", "stats2", cards.card2);
+setupCard("littleM", "model2", "stats2", cards.card2);
 setupCard("sus", "model3", "stats3", cards.card3);
