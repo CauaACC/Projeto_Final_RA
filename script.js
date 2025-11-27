@@ -1,14 +1,14 @@
 const cards = {
   card1: {
-    model: "assets/models/charA.glb",
+    model: "models/charA.glb",
     stats: "ATK: 70 | DEF: 50 | SPD: 45",
   },
   card2: {
-    model: "assets/models/cybertruck.glb",
+    model: "models/cybertruck.glb",
     stats: "ATK: 60 | DEF: 70 | SPD: 90",
   },
   card3: {
-    model: "assets/models/sus.glb",
+    model: "models/sus.glb",
     stats: "ATK: 90 | DEF: 10 | SPD: 50",
   },
 };
