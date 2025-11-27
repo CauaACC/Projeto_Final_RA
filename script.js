@@ -19,35 +19,23 @@ function setupCard(markerId, modelId, statsId, data) {
   const statsText = document.getElementById(statsId);
 
   marker.addEventListener("markerFound", () => {
-    console.log(markerId, "detectado!");
-
     modelEntity.setAttribute("gltf-model", data.model);
     modelEntity.setAttribute("scale", "0.9 0.9 0.9");
     modelEntity.setAttribute("rotation", "0 0 0");
-    modelEntity.setAttribute("visible", true);
 
+    modelEntity.setAttribute("animation", "property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear");
+
+    modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
-
-    modelEntity.setAttribute("animation", {
-      property: "rotation",
-      to: "0 360 0",
-      loop: true,
-      dur: 3000,
-      easing: "linear",
-    });
   });
 
   marker.addEventListener("markerLost", () => {
-    console.log(markerId, "perdido.");
-
     modelEntity.setAttribute("visible", false);
     statsText.setAttribute("visible", false);
   });
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  setupCard("charA", "model1", "stats1", cards.card1);
-  setupCard("cybertruck", "model2", "stats2", cards.card2);
-  setupCard("sus", "model3", "stats3", cards.card3);
-});
+setupCard("charA", "model1", "stats1", cards.card1);
+setupCard("cybertruck", "model2", "stats2", cards.card2);
+setupCard("sus", "model3", "stats3", cards.card3);
