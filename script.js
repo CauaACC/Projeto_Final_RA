@@ -13,11 +13,11 @@ const cards = {
   },
 };
 
-function setupCard(markerId, modelId, statsId, planeId, data) {
+function setupCard(markerId, modelId, statsId, data) {
   const marker = document.getElementById(markerId);
   const modelEntity = document.getElementById(modelId);
   const statsText = document.getElementById(statsId);
-  const plane = document.getElementById(planeId);
+  // const plane = document.getElementById(planeId);
 
   marker.addEventListener("markerFound", () => {
     modelEntity.setAttribute("gltf-model", data.model);
@@ -31,16 +31,16 @@ function setupCard(markerId, modelId, statsId, planeId, data) {
     modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
-    plane.setAttribute("visible", true);
+    // plane.setAttribute("visible", true);
   });
 
   marker.addEventListener("markerLost", () => {
     modelEntity.setAttribute("visible", false);
     statsText.setAttribute("visible", false);
-    plane.setAttribute("visible", false);
+    // plane.setAttribute("visible", false);
   });
 }
 
-setupCard("charA", "model1", "stats1", "plane1", cards.card1);
-setupCard("cybertruck", "model2", "stats2", "plane2", cards.card2);
-setupCard("sus", "model3", "stats3", "plane3", cards.card3);
+setupCard("charA", "model1", "stats1", cards.card1);
+setupCard("cybertruck", "model2", "stats2", cards.card2);
+setupCard("sus", "model3", "stats3", cards.card3);
