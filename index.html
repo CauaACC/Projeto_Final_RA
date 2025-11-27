@@ -4,13 +4,8 @@
     <meta charset="UTF-8" />
     <title>Trading Cards AR</title>
 
-    <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-
-    <!-- AR.js -->
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
-
-    <!-- Script da lógica -->
     <script src="script.js"></script>
 
     <style>
@@ -26,20 +21,17 @@
       embedded
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <!-- Marcador 1 -->
-      <a-marker id="card1" type="pattern" url="assets/markers/card1.patt">
+      <a-marker id="charA" type="pattern" url="assets/markers/charA_marker.patt">
         <a-entity id="model1" visible="false"></a-entity>
         <a-text id="stats1" value="" color="#fff" position="0 1 0" visible="false"></a-text>
       </a-marker>
 
-      <!-- Marcador 2 -->
-      <a-marker id="card2" type="pattern" url="assets/markers/card2.patt">
+      <a-marker id="cybertruck" type="pattern" url="assets/markers/cybertruck_marker.patt">
         <a-entity id="model2" visible="false"></a-entity>
         <a-text id="stats2" value="" color="#fff" position="0 1 0" visible="false"></a-text>
       </a-marker>
 
-      <!-- Marcador 3 -->
-      <a-marker id="card3" type="pattern" url="assets/markers/card3.patt">
+      <a-marker id="sus" type="pattern" url="assets/markers/sus_marker.patt">
         <a-entity id="model3" visible="false"></a-entity>
         <a-text id="stats3" value="" color="#fff" position="0 1 0" visible="false"></a-text>
       </a-marker>

@@ -1,20 +1,18 @@
-// Dados dos personagens
 const cards = {
   card1: {
-    model: "assets/models/card1.glb",
-    stats: "ATK: 80 | DEF: 65 | SPD: 40",
+    model: "assets/models/charA.glb",
+    stats: "ATK: 70 | DEF: 50 | SPD: 45",
   },
   card2: {
-    model: "assets/models/card2.glb",
-    stats: "ATK: 50 | DEF: 90 | SPD: 20",
+    model: "assets/models/cybertruck.glb",
+    stats: "ATK: 60 | DEF: 70 | SPD: 90",
   },
   card3: {
-    model: "assets/models/card3.glb",
-    stats: "ATK: 95 | DEF: 40 | SPD: 70",
+    model: "assets/models/sus.glb",
+    stats: "ATK: 90 | DEF: 10 | SPD: 50",
   },
 };
 
-// Função para configurar cada marcador
 function setupCard(markerId, modelId, statsId, data) {
   const marker = document.getElementById(markerId);
   const modelEntity = document.getElementById(modelId);
@@ -23,12 +21,10 @@ function setupCard(markerId, modelId, statsId, data) {
   marker.addEventListener("markerFound", () => {
     console.log(markerId, "detectado!");
 
-    // Carregar modelo glb
     modelEntity.setAttribute("gltf-model", data.model);
     modelEntity.setAttribute("scale", "0.5 0.5 0.5");
     modelEntity.setAttribute("rotation", "0 0 0");
 
-    // Rotação 360° contínua
     modelEntity.setAttribute("animation", {
       property: "rotation",
       to: "0 360 0",
@@ -37,7 +33,6 @@ function setupCard(markerId, modelId, statsId, data) {
       easing: "linear",
     });
 
-    // Exibir modelo e stats
     modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
@@ -51,7 +46,6 @@ function setupCard(markerId, modelId, statsId, data) {
   });
 }
 
-// Ativar cada card
-setupCard("card1", "model1", "stats1", cards.card1);
-setupCard("card2", "model2", "stats2", cards.card2);
-setupCard("card3", "model3", "stats3", cards.card3);
+setupCard("charA", "model1", "stats1", cards.charA_marker);
+setupCard("cybertruck", "model2", "stats2", cards.cybertruck_marker);
+setupCard("sus", "model3", "stats3", cards.sus_marker);
