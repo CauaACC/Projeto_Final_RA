@@ -1,13 +1,13 @@
 const cards = {
-  charA: {
+  card1: {
     model: "assets/models/charA.glb",
     stats: "ATK: 70 | DEF: 50 | SPD: 45",
   },
-  cybertruck: {
+  card2: {
     model: "assets/models/cybertruck.glb",
     stats: "ATK: 60 | DEF: 70 | SPD: 90",
   },
-  sus: {
+  card3: {
     model: "assets/models/sus.glb",
     stats: "ATK: 90 | DEF: 10 | SPD: 50",
   },
@@ -24,6 +24,10 @@ function setupCard(markerId, modelId, statsId, data) {
     modelEntity.setAttribute("gltf-model", data.model);
     modelEntity.setAttribute("scale", "0.9 0.9 0.9");
     modelEntity.setAttribute("rotation", "0 0 0");
+    modelEntity.setAttribute("visible", true);
+
+    statsText.setAttribute("value", data.stats);
+    statsText.setAttribute("visible", true);
 
     modelEntity.setAttribute("animation", {
       property: "rotation",
@@ -32,10 +36,6 @@ function setupCard(markerId, modelId, statsId, data) {
       dur: 3000,
       easing: "linear",
     });
-
-    modelEntity.setAttribute("visible", true);
-    statsText.setAttribute("value", data.stats);
-    statsText.setAttribute("visible", true);
   });
 
   marker.addEventListener("markerLost", () => {
@@ -46,6 +46,8 @@ function setupCard(markerId, modelId, statsId, data) {
   });
 }
 
-setupCard("charA", "model1", "stats1", cards.charA);
-setupCard("cybertruck", "model2", "stats2", cards.cybertruck);
-setupCard("sus", "model3", "stats3", cards.sus);
+window.addEventListener('DOMContentLoaded', () => {
+  setupCard("charA", "model1", "stats1", cards.card1);
+  setupCard("cybertruck", "model2", "stats2", cards.card2);
+  setupCard("sus", "model3", "stats3", cards.card3);
+});
