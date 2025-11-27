@@ -15,16 +15,8 @@
   <body>
     <a-scene
       embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      arjs="
-        sourceType: webcam;
-        sourceWidth: 1280;
-        sourceHeight: 720;
-        displayWidth: 1280;
-        displayHeight: 720;
-        debugUIEnabled: false;
-      "
+      arjs="debugUIEnabled: false"
+      cursor="rayOrigin: mouse"
     >
 
       <a-marker id="charA" type="pattern" url="assets/markers/charA_marker.patt">
