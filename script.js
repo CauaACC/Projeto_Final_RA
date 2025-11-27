@@ -22,7 +22,7 @@ function setupCard(markerId, modelId, statsId, data) {
     console.log(markerId, "detectado!");
 
     modelEntity.setAttribute("gltf-model", data.model);
-    modelEntity.setAttribute("scale", "0.9 0.9 0.9");
+    modelEntity.setAttribute("scale", "1 1 1");
     modelEntity.setAttribute("rotation", "0 0 0");
 
     modelEntity.setAttribute("animation", {
@@ -34,6 +34,7 @@ function setupCard(markerId, modelId, statsId, data) {
     });
 
     modelEntity.setAttribute("visible", true);
+    
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
   });

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <title>Trading Cards AR</title>
 
-<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.1.0/aframe-ar.min.js"></script>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.1.0/aframe-ar.min.js"></script>
 
     <style>
       body {
@@ -18,24 +18,27 @@
   <body>
     <a-scene
       embedded
+      vr-mode-ui="enabled: false"
       arjs="sourceType: webcam; debugUIEnabled: false;"
     >
-      <a-marker id="charA" type="pattern" url="assets/markers/charA_marker.patt">
+      <a-marker id="charA" type="pattern" url="assets/markers/charA_marker.patt" patternRatio="0.9">
         <a-entity id="model1" visible="false"></a-entity>
         <a-text id="stats1" value="" color="#fff" position="0 1 0" visible="false"></a-text>
       </a-marker>
 
-      <a-marker id="cybertruck" type="pattern" url="assets/markers/cybertruck_marker.patt">
+      <a-marker id="cybertruck" type="pattern" url="assets/markers/cybertruck_marker.patt" patternRatio="0.9">
         <a-entity id="model2" visible="false"></a-entity>
         <a-text id="stats2" value="" color="#fff" position="0 1 0" visible="false"></a-text>
       </a-marker>
 
-      <a-marker id="sus" type="pattern" url="assets/markers/sus_marker.patt">
+      <a-marker id="sus" type="pattern" url="assets/markers/sus_marker.patt" patternRatio="0.9">
         <a-entity id="model3" visible="false"></a-entity>
         <a-text id="stats3" value="" color="#fff" position="0 1 0" visible="false"></a-text>
       </a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
+
+    <script src="script.js"></script>
   </body>
 </html>
