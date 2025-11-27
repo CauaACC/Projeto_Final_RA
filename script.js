@@ -17,7 +17,6 @@ function setupCard(markerId, modelId, statsId, data) {
   const marker = document.getElementById(markerId);
   const modelEntity = document.getElementById(modelId);
   const statsText = document.getElementById(statsId);
-  // const plane = document.getElementById(planeId);
 
   marker.addEventListener("markerFound", () => {
     modelEntity.setAttribute("gltf-model", data.model);
@@ -31,13 +30,11 @@ function setupCard(markerId, modelId, statsId, data) {
     modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
-    // plane.setAttribute("visible", true);
   });
 
   marker.addEventListener("markerLost", () => {
     modelEntity.setAttribute("visible", false);
     statsText.setAttribute("visible", false);
-    // plane.setAttribute("visible", false);
   });
 }
 
