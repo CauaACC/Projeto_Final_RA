@@ -26,10 +26,6 @@ function setupCard(markerId, modelId, statsId, data) {
   marker.addEventListener("markerFound", () => {
     modelEntity.setAttribute("gltf-model", data.model);
     modelEntity.setAttribute("rotation", "0 0 0");
-    modelEntity.setAttribute(
-      "animation",
-      "property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear"
-    );
 
     modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
