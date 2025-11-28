@@ -20,7 +20,6 @@ function setupCard(markerId, modelId, statsId, data) {
 
   marker.addEventListener("markerFound", () => {
     modelEntity.setAttribute("gltf-model", data.model);
-    modelEntity.setAttribute("scale", "1 1 1");
     modelEntity.setAttribute("rotation", "0 0 0");
     modelEntity.setAttribute(
       "animation",
