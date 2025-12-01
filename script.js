@@ -30,7 +30,7 @@ function setupCard(markerId, modelId, statsId, data) {
     modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
-    sound.currentTime = 1;
+    sound.currentTime = 0;
     sound.play();
   });
 
