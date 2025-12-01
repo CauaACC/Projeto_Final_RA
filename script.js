@@ -12,7 +12,7 @@ const cards = {
   card3: {
     model: "models/sus.glb",
     stats: "ATK: 90 | DEF: 10 | SPD: 50",
-    audio: "audio/sus.mp3",
+    sound: "audio/sus.mp3",
   },
 };
 
@@ -30,7 +30,7 @@ function setupCard(markerId, modelId, statsId, data) {
     modelEntity.setAttribute("visible", true);
     statsText.setAttribute("value", data.stats);
     statsText.setAttribute("visible", true);
-    sound.currentTime = 0;
+    sound.currentTime = 1;
     sound.play();
   });
 
